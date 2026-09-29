@@ -18,4 +18,9 @@ public class HelloController {
         return "API running - " + LocalDate.now();
     }
 
+    @GetMapping("/goodbye")
+    public String goodbye() {
+        return "Goodbye from Spring Boot!";
+    }
+
 }
