@@ -2,6 +2,7 @@ package uk.ac.westminster.productsapi.model;
 
 public class Customer {
 
+    private static int customerCount;
     private Long id;
     private String name;
     private String email;
@@ -12,6 +13,7 @@ public class Customer {
         this.name = name;
         this.email = email;
         this.address = address;
+        customerCount++;
     }
 
     public Long getId() {
@@ -30,7 +32,12 @@ public class Customer {
         return address;
     }
 
+    public static int getCustomerCount() {
+        return customerCount;
+    }
+
     public Customer() {
+        customerCount++;
     }
 
 }
