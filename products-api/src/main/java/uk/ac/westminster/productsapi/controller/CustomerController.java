@@ -15,7 +15,11 @@ public class CustomerController {
     public Customer getById(@PathVariable Long id) {
         Address address = new Address("115 New Cavendish Street", "London", "W1W 6UW");
 
-        return new Customer(id, "Ada Lovelace", "ada@example.com", address);
+        String tags[] = new String[1];
+
+        tags[0] = "some value";
+
+        return new Customer(id, "Ada Lovelace", "ada@example.com", address, tags);
     }
 
 }
